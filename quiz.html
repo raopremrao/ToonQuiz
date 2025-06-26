@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToonQuiz - Quiz Time!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>🎭 ToonQuiz</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="quiz-header">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <p class="question-counter">Question <span id="current-question">1</span> of 10</p>
+        </div>
+
+        <main class="quiz-main">
+            <div class="quiz-container">
+                <div class="question-section">
+                    <h2 id="question-text">Loading question...</h2>
+                </div>
+
+                <div class="answers-section">
+                    <div class="answer-option" onclick="selectAnswer(0)">
+                        <span class="option-letter">A</span>
+                        <span class="option-text" id="option-0">Loading...</span>
+                    </div>
+                    <div class="answer-option" onclick="selectAnswer(1)">
+                        <span class="option-letter">B</span>
+                        <span class="option-text" id="option-1">Loading...</span>
+                    </div>
+                    <div class="answer-option" onclick="selectAnswer(2)">
+                        <span class="option-letter">C</span>
+                        <span class="option-text" id="option-2">Loading...</span>
+                    </div>
+                    <div class="answer-option" onclick="selectAnswer(3)">
+                        <span class="option-letter">D</span>
+                        <span class="option-text" id="option-3">Loading...</span>
+                    </div>
+                </div>
+
+                <div class="quiz-controls">
+                    <button id="skip-btn" onclick="skipQuestion()" class="skip-btn">⏭️ Skip Question</button>
+                    <button id="next-btn" onclick="nextQuestion()" disabled>Next Question</button>
+                </div>
+            </div>
+
+                <div class="results-container" id="results-container" style="display: none;">
+                <h2>🎉 Quiz Complete! 🎉</h2>
+                <div class="score-display">
+                    <h3>Your Score:</h3>
+                    <div class="score-circle">
+                        <span id="final-score">0</span>
+                        <span class="score-total">/10</span>
+                    </div>
+                    <div class="score-details">
+                        <p>Correct: <span id="correct-count">0</span></p>
+                        <p>Skipped: <span id="skipped-count">0</span></p>
+                        <p>Incorrect: <span id="incorrect-count">0</span></p>
+                    </div>
+                </div>
+                <div class="score-message" id="score-message"></div>
+                <div class="results-actions">
+                    <button onclick="restartQuiz()" class="restart-btn">🔄 Try Again</button>
+                    <button onclick="goHome()" class="home-btn">🏠 Go Home</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>🎭 ToonQuiz</h3>
+                <p>The ultimate destination for cartoon trivia and fun!</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="quiz.html">Take Quiz</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#help">Help</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li>Classic Cartoons</li>
+                    <li>Disney Characters</li>
+                    <li>Modern Animation</li>
+                    <li>Superhero Toons</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <span>📧 info@toonquiz.com</span>
+                    <span>📱 Follow us for updates</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ToonQuiz - Have Fun Learning! | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
