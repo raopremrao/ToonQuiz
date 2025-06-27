@@ -865,3 +865,48 @@ footer {
     }
 
 }
+
+@media (max-width: 380px) {
+    .header-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 15px 8px;
+        min-height: 0;
+    }
+
+    .logo h1 {
+        font-size: 1.6rem;
+        margin-right: 8px;
+        margin-bottom: 0;
+        padding: 0;
+        line-height: 1;
+        /* Remove extra space below */
+        display: flex;
+        align-items: center;
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+        padding: 0 2px;
+        line-height: 1;
+    }
+
+    .site-header {
+        margin-top: 4px;
+        border-radius: 12px;
+        min-height: 0;
+        padding: 0;
+    }
+
+
+}
