@@ -796,6 +796,8 @@ footer {
     .question-section h2 {
         font-size: 1.2rem;
     }
+
+
     .answer-option {
         font-size: 0.9rem; /* decreased font size */
         padding: 0;
@@ -1142,8 +1144,5 @@ footer {
         align-items: center;
         gap: 10px;
     }
-
-
-
 
 }
