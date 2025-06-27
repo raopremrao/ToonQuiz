@@ -6,8 +6,8 @@ const quizData = [
         correct: 1
     },
     {
-        question: "In Tom and Jerry, which one is the cat?",
-        options: ["Jerry", "Tom", "Spike", "Tyke"],
+        question: "Which network originally aired Courage the Cowardly Dog?",
+        options: ["Nickelodeon", "Cartoon Network", "Disney Channel", "Sonic"],
         correct: 1
     },
     {
@@ -16,8 +16,8 @@ const quizData = [
         correct: 2
     },
     {
-        question: "Which cartoon character lives in a pineapple under the sea?",
-        options: ["Patrick Star", "Squidward", "SpongeBob SquarePants", "Mr. Krabs"],
+        question: "What was the name of dog in Tom and Jerry?",
+        options: ["Pluto", "Scooby-Doo", "Spike", "Lamput"],
         correct: 2
     },
     {
@@ -31,23 +31,23 @@ const quizData = [
         correct: 1
     },
     {
-        question: "What is Bugs Bunny's famous catchphrase?",
-        options: ["That's all folks!", "What's up, Doc?", "I tawt I taw a puddy tat", "Yabba-Dabba-Doo!"],
+        question: "Ben 10 first Girlfriend was?",
+        options: ["None(Sigma Boy)", "Julie Yamamoto", "Charmcaster", "Kai Green"],
         correct: 1
     },
     {
-        question: "Which cartoon family lives in the town of Springfield?",
-        options: ["The Flintstones", "The Jetsons", "The Simpsons", "The Griffins"],
+        question: "What is Doraemon's signature fear",
+        options: ["Nobita's Mom", "Giyan", "Mice", "Dogs"],
         correct: 2
     },
     {
-        question: "What is the name of Popeye's girlfriend?",
-        options: ["Betty Boop", "Olive Oyl", "Minnie Mouse", "Wilma Flintstone"],
+        question: "Which character is Hattori's younger brother?",
+        options: ["Shishimaru", "Shinzo", "Kiyo","Kenichi"],
         correct: 1
     },
     {
-        question: "In Finding Nemo, what type of fish is Nemo?",
-        options: ["Goldfish", "Clownfish", "Angelfish", "Pufferfish"],
+        question: "What is Lamput?",
+        options: ["A Scientist", "A creature that can shapeshift", "A Doctor", "A Robot"],
         correct: 1
     }
 ];
@@ -164,7 +164,16 @@ function nextQuestion() {
 // Function to update progress bar
 function updateProgress() {
     const progress = ((currentQuestion) / quizData.length) * 100;
-    document.getElementById('progress').style.width = progress + '%';
+    const progressBar = document.getElementById('progress');
+    if (window.innerWidth <= 768) {
+        // On mobile, horizontal bar
+        progressBar.style.width = progress + '%';
+        progressBar.style.height = '100%';
+    } else {
+        // On desktop, vertical bar
+        progressBar.style.height = progress + '%';
+        progressBar.style.width = '100%';
+    }
 }
 
 // Function to show final results
@@ -177,7 +186,14 @@ function showResults() {
     document.getElementById('incorrect-count').textContent = (10 - score - skippedQuestions);
     
     // Update progress to 100%
-    document.getElementById('progress').style.width = '100%';
+    const progressBar = document.getElementById('progress');
+    if (window.innerWidth <= 768) {
+        progressBar.style.width = '100%';
+        progressBar.style.height = '100%';
+    } else {
+        progressBar.style.height = '100%';
+        progressBar.style.width = '100%';
+    }
     
     // Show appropriate message based on score
     const messageElement = document.getElementById('score-message');
@@ -185,14 +201,10 @@ function showResults() {
     
     if (score === 10) {
         message = '🏆 Perfect! You are a true cartoon expert!';
-    } else if (score >= 8) {
-        message = '🌟 Excellent! You know your cartoons very well!';
-    } else if (score >= 6) {
-        message = '👍 Good job! You have solid cartoon knowledge!';
-    } else if (score >= 4) {
+    } else if (score >= 2) {
         message = '📚 Not bad! Keep watching more cartoons!';
     } else {
-        message = '🎭 Keep learning! There are so many great cartoons to discover!';
+        message = 'GenZ 😅 You might want to brush up on your cartoon knowledge!';
     }
     
     if (skippedQuestions > 0) {
@@ -225,3 +237,6 @@ function goHome() {
 document.addEventListener('DOMContentLoaded', function() {
     initializeQuiz();
 });
+
+// Update progress bar on resize for responsiveness
+window.addEventListener('resize', updateProgress);

@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToonQuiz - Quiz Time!</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- Header -->
     <header class="site-header">
         <div class="header-container">
             <div class="logo">
-                <h1>🎭 ToonQuiz</h1>
+                <h1>ToonQuiz</h1>
             </div>
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="quiz.html">Quiz</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact-quiz">Contacts</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,13 +26,17 @@
 
     <div class="container">
         <div class="quiz-header">
-            <div class="progress-bar">
-                <div class="progress" id="progress"></div>
-            </div>
-            <p class="question-counter">Question <span id="current-question">1</span> of 10</p>
+            <!-- Remove old horizontal progress bar and question counter from here -->
         </div>
 
         <main class="quiz-main">
+            <!-- Add vertical progress bar to the left -->
+            <div class="vertical-progress-bar-container">
+                <div class="vertical-progress-bar">
+                    <div class="vertical-progress" id="progress"></div>
+                </div>
+                <p class="question-counter"> Q <span id="current-question">1</span> / 10</p>
+            </div>
             <div class="quiz-container">
                 <div class="question-section">
                     <h2 id="question-text">Loading question...</h2>
@@ -87,40 +91,19 @@
     </div>
 
     <!-- Footer -->
-    <footer class="site-footer">
+    <footer class="site-footer" id="contact-quiz">
         <div class="footer-container">
             <div class="footer-section">
-                <h3>🎭 ToonQuiz</h3>
-                <p>The ultimate destination for cartoon trivia and fun!</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="quiz.html">Take Quiz</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#help">Help</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Categories</h4>
-                <ul>
-                    <li>Classic Cartoons</li>
-                    <li>Disney Characters</li>
-                    <li>Modern Animation</li>
-                    <li>Superhero Toons</li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Connect</h4>
+                <h4>Contact Us</h4>
                 <div class="social-links">
-                    <span>📧 info@toonquiz.com</span>
-                    <span>📱 Follow us for updates</span>
+                    <span><a href="mailto:raom61337@gmail.com"><i class="fa fa-envelope" style="font-size:25px; color:white;"></i></a></span>
+                    <span><a href="https://www.instagram.com/t_.prem._/" target="_blank"><i class="fa fa-instagram" style="font-size:25px;color:red"></i></a></span>
+                    <span><a href="https://github.com/raopremrao"><i class="fa fa-github" style="font-size:25px; color: aliceblue;"></i></a></span>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 ToonQuiz - Have Fun Learning! | All Rights Reserved</p>
+            <p>&copy; 2025 ToonQuiz. All Rights Reserved</p>
         </div>
     </footer>
 
