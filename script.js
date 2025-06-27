@@ -68,14 +68,21 @@ function startQuiz() {
 function initializeQuiz() {
     if (window.location.pathname.includes('quiz.html')) {
         loadQuestion();
-        updateProgress();
     }
 }
 
 // Function to load current question
 function loadQuestion() {
     const question = quizData[currentQuestion];
-    
+
+    // Wait until all option elements are available in the DOM
+    for (let i = 0; i < 4; i++) {
+        if (!document.getElementById(`option-${i}`)) {
+            setTimeout(loadQuestion, 50);
+            return;
+        }
+    }
+
     document.getElementById('question-text').textContent = question.question;
     document.getElementById('current-question').textContent = currentQuestion + 1;
     
@@ -117,7 +124,6 @@ function skipQuestion() {
     
     if (currentQuestion < quizData.length) {
         loadQuestion();
-        updateProgress();
     } else {
         showResults();
     }
@@ -150,7 +156,6 @@ function nextQuestion() {
         
         if (currentQuestion < quizData.length) {
             loadQuestion();
-            updateProgress();
             // Re-enable options
             options.forEach(option => {
                 option.style.pointerEvents = 'auto';
@@ -161,21 +166,6 @@ function nextQuestion() {
     }, 1500);
 }
 
-// Function to update progress bar
-function updateProgress() {
-    const progress = ((currentQuestion) / quizData.length) * 100;
-    const progressBar = document.getElementById('progress');
-    if (window.innerWidth <= 768) {
-        // On mobile, horizontal bar
-        progressBar.style.width = progress + '%';
-        progressBar.style.height = '100%';
-    } else {
-        // On desktop, vertical bar
-        progressBar.style.height = progress + '%';
-        progressBar.style.width = '100%';
-    }
-}
-
 // Function to show final results
 function showResults() {
     document.querySelector('.quiz-container').style.display = 'none';
@@ -184,16 +174,6 @@ function showResults() {
     document.getElementById('correct-count').textContent = score;
     document.getElementById('skipped-count').textContent = skippedQuestions;
     document.getElementById('incorrect-count').textContent = (10 - score - skippedQuestions);
-    
-    // Update progress to 100%
-    const progressBar = document.getElementById('progress');
-    if (window.innerWidth <= 768) {
-        progressBar.style.width = '100%';
-        progressBar.style.height = '100%';
-    } else {
-        progressBar.style.height = '100%';
-        progressBar.style.width = '100%';
-    }
     
     // Show appropriate message based on score
     const messageElement = document.getElementById('score-message');
@@ -225,7 +205,6 @@ function restartQuiz() {
     document.getElementById('results-container').style.display = 'none';
     
     loadQuestion();
-    updateProgress();
 }
 
 // Function to go back to home page
@@ -237,6 +216,3 @@ function goHome() {
 document.addEventListener('DOMContentLoaded', function() {
     initializeQuiz();
 });
-
-// Update progress bar on resize for responsiveness
-window.addEventListener('resize', updateProgress);

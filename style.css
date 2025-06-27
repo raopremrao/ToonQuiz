@@ -125,31 +125,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* Progress bar */
-.progress-bar {
-    width: 100%;
-    height: 8px;
-    background-color: rgba(255,255,255,0.3);
-    border-radius: 4px;
-    margin: 20px 0 10px 0;
-    overflow: hidden;
-}
-
-.progress {
-    height: 100%;
-    background: linear-gradient(90deg, #4CAF50, #45a049);
-    width: 0%;
-    transition: width 0.3s ease;
-    border-radius: 4px;
-}
-
-.question-counter {
-    color: #fff;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    margin-left: 10px;
-}
-
 /* Main content */
 main {
     flex: 1;
@@ -555,46 +530,6 @@ main {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* --- Vertical progress bar styles --- */
-.vertical-progress-bar-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 48px;
-    margin-right: 18px;
-    margin-left: 0;
-    height: 100%;
-    justify-content: center; /* Center vertically */
-    z-index: 2;
-}
-
-.vertical-progress-bar {
-    margin-top: 67px;
-    width: 18px;
-    height: 380px;
-    background: rgba(255,255,255,0.85);
-    border-radius: 12px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 24px 2px #000000cc; /* strong black shadow */
-    margin-bottom: 0;
-    border: 1px solid #222;
-    z-index: 2;
-}
-
-.vertical-progress {
-    
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 0%;
-    background: linear-gradient(180deg, #4CAF50, #45a049);
-    border-radius: 12px;
-    transition: height 0.3s cubic-bezier(.4,2,.6,1);
-    z-index: 3;
-}
-
 /* Site Footer */
 .site-footer {
     background: rgba(0, 0, 0, 0.8);
@@ -759,9 +694,6 @@ footer {
     .quiz-container {
         max-width: 98vw;
         padding: 8px 2vw 8px 2vw;
-    }
-    .vertical-progress-bar {
-        height: 120px;
     }
 }
 
