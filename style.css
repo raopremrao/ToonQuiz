@@ -39,6 +39,9 @@ body {
 }
 
 .logo h1 {
+    font-family: "UoqMunThenKhung", serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 2rem;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
@@ -53,13 +56,14 @@ body {
 .main-nav a {
     text-decoration: none;
     color: #ffffff;
-    font-weight: 500;
+    font-size: 1.2rem;
+    font-weight: 700;
     transition: color 0.3s ease;
     position: relative;
 }
 
 .main-nav a:hover {
-    color: #02ff41cd;
+    color: #ff0202fe;
 }
 
 .main-nav a::after {
@@ -69,7 +73,7 @@ body {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #667eea;
+    background-color: #000000;
     transition: width 0.3s ease;
 }
 
@@ -89,7 +93,18 @@ body {
 
 .hero-container{
     background: linear-gradient(-90deg, #659999, #f4791f);
+    background-image: url('147-100-31.png');
     box-shadow: #000000 0px 5px 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.body{
+    background: linear-gradient(-90deg, #659999, #f4791f);
+    background-image: url('147-100-31.png');
+    box-shadow: #000000 0px 5px 15px;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Hero section for landing page */
@@ -148,6 +163,12 @@ main {
     color: transparent;
     background-clip: text;
     margin-bottom: 15px;
+    font-family: "Bitcount Grid Double", system-ui;
+    font-size: 3rem;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings: "slnt" 0,"CRSV" 0.5, "ELSH" 0,"ELXP" 0;
 }
 
 .welcome-section p {
@@ -176,21 +197,22 @@ main {
 .instructions li {
     /* background: #f7fafc; */
     background: transparent;
-    backdrop-filter: blur(5px);
-    box-shadow: #000000 0px 5px 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: #000000 5px  5px 15px;
     padding: 12px 20px;
     margin: 10px 0;
     border-radius: 30px;
     color: #000000;
-    border-left: 30px solid #f4791f;
+    /* border-left: 30px solid #f4791f; */
     /* border-right: 10px solid #153be4; */
+    border: #000000 2px solid ;
     transition: transform 0.2s ease;
 }
 
 .instructions li:hover {
     transform: translateX(7px);
     /* border-right: 30px solid #153be4; */
-    border-right: 30px solid #659999;
+    /* border-right: 30px solid #659999; */
     border-left: transparent;
 }
 
@@ -301,6 +323,8 @@ main {
     padding: 0 0 5px 0;
     box-shadow: #000000 0px 5px 15px;
     background: linear-gradient(-90deg, #659999, #f4791f);
+    background-image: url('147-100-31.png');
+
 }
 
 .quiz-container {
@@ -318,6 +342,9 @@ main {
 }
 
 .question-section h2 {
+    font-family: "Lobster Two", "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     font-size: 1.8rem; /* decreased font size */
     color: #000000;
     line-height: 1.3;
