@@ -184,7 +184,7 @@ function showResults() {
     } else if (score >= 2) {
         message = '📚 Not bad! Keep watching more cartoons!';
     } else {
-        message = 'GenZ 😅 You might want to brush up on your cartoon knowledge!';
+        message = 'GenZ ? 😅 You might want to brush up on your cartoon knowledge!';
     }
     
     if (skippedQuestions > 0) {

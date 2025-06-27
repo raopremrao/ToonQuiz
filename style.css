@@ -331,18 +331,20 @@ main {
 .answer-option {
     display: flex;
     align-items: center;
-    background: #f7fafc;
+    /* background: #f7fafc; */
+    background: transparent;
     margin: 10px 0;
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
+    border: 2px solid #1a1e23;
     font-size: 1rem; /* decreased font size */
 }
 
 .answer-option:hover {
-    background: #e2e8f0;
+    background: #ce5353;
+    box-shadow: #000000 5px 10px 15px;
     transform: translateX(5px);
 }
 
@@ -378,9 +380,8 @@ main {
 
 .option-text {
     font-size: 1rem; /* decreased font size */
-    color: #4a5568;
+    color: #000000;
 }
-
 .quiz-controls {
     text-align: center;
     display: flex;
@@ -484,7 +485,7 @@ main {
 }
 
 .score-details p {
-    background: #f7fafc;
+    background: #ffffff;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -765,6 +766,67 @@ footer {
     .feature-card h4{
         font-size: 1.3rem;
     }
+    .question-section h2 {
+        font-size: 1.2rem;
+    }
+    .answer-option {
+        font-size: 0.9rem; /* decreased font size */
+        padding: 0;
+        margin: 0px;
+        margin-top: 10px;
+    }
+    .answers-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .option-letter {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem; /* decreased font size */
+    }
+    .skip-btn {
+        padding: 10px 20px;
+    }
+    #next-btn {
+        padding: 10px 20px;
+    }
+    .results-container h2 {
+        margin-top: 20px;
+        margin-bottom: 13px;
+        font-size: 1.5rem;
+    }
+    .score-circle #final-score {
+        font-size: 1.9rem;
+        font-weight: bold;
+    }
+    .score-circle span {
+        font-size: 1rem;
+    }
+    .score-circle {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+    }
+    .score-details {
+        flex-direction: row;
+        align-items: center;
+        /* justify-content: flex-start; */
+        gap: 10px;
+        
+    }
+    .score-message {
+        font-size: 0.9rem;
+        color: #000000;
+        margin-bottom: 15px;
+    }
+    .restart-btn, .home-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 150px;
+    }
+    .site-footer {
+        padding: 10px 10px;
+    }
 
 
 }
@@ -837,9 +899,83 @@ footer {
     .feature-card h4{
         font-size: 1.3rem;
     }
+    .question-section h2 {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+    .answer-option {
+        font-size: 0.9rem; /* decreased font size */
+        padding: 0;
+        margin: 0px;
+        margin-top: 10px;
+    }
+    .answers-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .option-letter {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem; /* decreased font size */
+    }
+    .skip-btn {
+        padding: 10px 20px;
+    }
+    #next-btn {
+        padding: 10px 20px;
+    }
+    .results-container h2 {
+        margin-top: 20px;
+        margin-bottom: 13px;
+        font-size: 1.5rem;
+    }
+    .score-circle #final-score {
+        font-size: 1.9rem;
+        font-weight: bold;
+    }
+    .score-circle span {
+        font-size: 1rem;
+    }
+    .score-circle {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+    }
+    .score-details {
+        flex-direction: row;
+        align-items: center;
+        /* justify-content: flex-start; */
+        gap: 10px;
+        
+    }
+    .score-message {
+        font-size: 0.9rem;
+        color: #000000;
+        margin-bottom: 15px;
+        margin-left: 2px;
+        margin-right: 2px;
+        text-align: space-between;
+    }
+    .restart-btn, .home-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 150px;
+    }
 
+    .site-footer {
+        padding: 10px 10px;
+    }
+
+    .results-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 
 }
+
+
+
 
 @media (max-width: 430px) {
     .header-container {
@@ -908,5 +1044,79 @@ footer {
     .feature-card h4{
         font-size: 1.3rem;
     }
+    .question-section h2 {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+    .answer-option {
+        font-size: 0.9rem; /* decreased font size */
+        padding: 0;
+        margin: 0px;
+        margin-top: 10px;
+    }
+    .answers-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .option-letter {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem; /* decreased font size */
+    }
+    .skip-btn {
+        padding: 10px 20px;
+    }
+    #next-btn {
+        padding: 10px 20px;
+    }
+    .results-container h2 {
+        margin-top: 20px;
+        margin-bottom: 13px;
+        font-size: 1.8rem;
+    }
+    .score-circle #final-score {
+        font-size: 1.9rem;
+        font-weight: bold;
+    }
+    .score-circle span {
+        font-size: 1rem;
+    }
+    .score-circle {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+    }
+    .score-details {
+        flex-direction: row;
+        align-items: center;
+        /* justify-content: flex-start; */
+        gap: 10px;
+        
+    }
+    .score-message {
+        font-size: 0.9rem;
+        color: #000000;
+        margin-bottom: 15px;
+        margin-left: 2px;
+        margin-right: 2px;
+        text-align: space-between;
+    }
+    .restart-btn, .home-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 150px;
+    }
+
+    .site-footer {
+        padding: 10px 10px;
+    }
+    .results-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+
 
 }
